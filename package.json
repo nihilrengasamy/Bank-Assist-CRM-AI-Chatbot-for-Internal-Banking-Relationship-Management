@@ -1,0 +1,17 @@
+{
+  "name": "banking-crm-ai-chatbot",
+  "version": "1.0.0",
+  "description": "Internal banking CRM chatbot with LangChain, optional OpenAI integration, and local mock mode.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.1.0",
+    "@langchain/openai": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
