@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Python Banking CRM AI Assistant</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Customer workspace">
+        <div class="brand">
+          <div class="brand-mark">B</div>
+          <div>
+            <p>Internal CRM</p>
+            <h1>Python Banking AI Assistant</h1>
+          </div>
+        </div>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Customer</h2>
+            <span id="aiMode" class="status">Mock AI</span>
+          </div>
+          <label class="field-label" for="customerSelect">Active profile</label>
+          <select id="customerSelect"></select>
+          <div id="profileCard" class="profile-card"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Quick Prompts</h2>
+          <div class="quick-grid">
+            <button data-prompt="Summarize this customer profile for a relationship manager.">Summary</button>
+            <button data-prompt="What are the KYC, AML, and risk items that need attention?">Risk View</button>
+            <button data-prompt="Suggest the next best operational actions before the next review.">Next Actions</button>
+            <button data-prompt="Draft a concise follow-up note for the relationship manager.">Follow-up</button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="chat-region" aria-label="AI chatbot">
+        <header class="chat-header">
+          <div>
+            <p>Banking Domain Assistant</p>
+            <h2>Ask about customers, service cases, KYC readiness, and relationship actions.</h2>
+          </div>
+          <div class="guardrail">Human review required for credit, investment, AML, and regulatory decisions.</div>
+        </header>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <form id="chatForm" class="composer">
+          <textarea id="messageInput" rows="2" placeholder="Ask: Summarize Northstar Dental's open risks and next actions"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
